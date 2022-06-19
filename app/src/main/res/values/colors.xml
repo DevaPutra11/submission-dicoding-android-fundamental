@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+
+<!--    COLOR LIGHT THEME-->
+    <color name="black_github_light">#24292F</color>
+    <color name="white_github_base_light">#FFFFFF</color>
+    <color name="grey_github_light">#FF5483</color>
+    <color name="green_github_light">#2DA44E</color>
+
+
+<!--    COLOR DARK THEME-->
+    <color name="black_github">#161B22</color>
+    <color name="black_base_github">#010409</color>
+    <color name="black_base_github2">#0D1117</color>
+    <color name="white_github">#F0F6EE</color>
+    <color name="grey_github">#8B949E</color>
+    <color name="blue_github">#2085FF</color>
+    <color name="grey_github_2">#21262D</color>
+</resources>

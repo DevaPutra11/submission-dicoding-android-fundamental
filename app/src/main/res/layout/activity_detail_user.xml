@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contrain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tabs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_name_received"
+            style="@style/TextName"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_user"
+            tools:text="@string/name_received" />
+
+        <TextView
+            style="@style/textUsername"
+            android:id="@+id/tv_username_received"
+            android:layout_marginTop="4dp"
+            tools:text="@string/username_received"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name_received"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_received"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_received" />
+
+        <ImageView
+            android:id="@+id/icon_follower"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_people"
+            app:layout_constraintStart_toStartOf="@+id/tv_username_received"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username_received"
+            android:contentDescription="@string/icon"/>
+
+        <TextView
+            style="@style/textContent.Bold"
+            android:id="@+id/tv_follower_received"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            tools:text="@string/follower_received"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/icon_follower"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username_received" />
+
+        <TextView
+            style="@style/textContent"
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/followers"
+            app:layout_constraintStart_toEndOf="@+id/tv_follower_received"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username_received" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_circle"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username_received"
+            android:contentDescription="@string/icon"/>
+
+        <TextView
+            style="@style/textContent.Bold"
+            android:id="@+id/tv_following_received"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            tools:text="@string/following_received"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username_received" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/textContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/following"
+            app:layout_constraintStart_toEndOf="@+id/tv_following_received"
+            app:layout_constraintTop_toTopOf="@+id/tv_following_received" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_book"
+            app:layout_constraintStart_toStartOf="@+id/icon_follower"
+            app:layout_constraintTop_toBottomOf="@+id/icon_follower"
+            android:contentDescription="@string/icon" />
+
+        <TextView
+            style="@style/textContent"
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/repositories"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"/>
+
+        <TextView
+            style="@style/textContent.Bold"
+            android:id="@+id/tv_repository_received"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            tools:text="@string/repository_received"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_house"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            android:contentDescription="@string/icon"/>
+
+        <TextView
+            style="@style/textContent"
+            android:id="@+id/tv_company_received"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            tools:text="@string/company_received"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            android:contentDescription="@string/icon"/>
+
+        <TextView
+            style="@style/textContent"
+            android:id="@+id/tv_location_received"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            tools:text="@string/location_received"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:tabSelectedTextColor="@color/blue_github"
+            app:tabIndicatorColor="@color/blue_github"
+            android:background="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location_received"
+            app:tabTextColor="@android:color/white" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tabs"
+            app:layout_constraintStart_toStartOf="@+id/tabs"
+            app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+        <ToggleButton
+            android:id="@+id/toggle_favorite"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/favorite_toggle"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
